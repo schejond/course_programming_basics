@@ -1,41 +1,97 @@
-﻿namespace Homework
+﻿using System;
+
+namespace Homework
 {
     internal class Program
     {
         static void Main(string[] args)
 
-        {//Jan Novák je starý 18 let. Váží 66 kilogramů a je 142 centimetrů vysoký
-         //Viggo Trabalik je starý 24 let. Váží 70 kilogramů a je 190 centimetrů vysoký 
+        {//Jan Novák je starý(á) 18 let. Váží 66 kilogramů a je 142 centimetrů vysoký/á.
 
-            int vekJ = 18;
-            int vekV = 24;
+            Console.WriteLine("Prvni osoba");
 
-            int mJ = 66;
-            int mV = 70;
+            Console.Write("Zadejte sve jmeno: ");
 
-            int lJ = 142;
-            int lV = 190;
+            string me = Console.ReadLine();
 
-            double cmj = 1.42;
-            double cmv = 1.9;
+            Console.WriteLine("Zadejte sve prijmeni: ");
 
-            double cmmj = 1.42 * 1.42;
-            double cmmv = 1.9 * 1.9;
+            string pr = Console.ReadLine();
 
-            string InfoJ = "Jan Novak je stary " + vekJ + " let. Vazi " + mJ + " kilogramu a je " + lJ + " centimetru vysoky.";
-            string InfoV = "Viggo Trabalik je stary " + vekV + " let. Vazi " + mV + " kilogramu a je " + lV + " centimetru vysoky.";
+            Console.Write("Zadejte svuj vek: ");
 
-            double BMIJ = mJ / cmmj;
-            double BMIV = mV / cmmv;
+            string ve = Console.ReadLine();
 
-            string BMIJt = "Janove BMI je " + BMIJ + ".";
-            string BMIVt = "Viggove BMI je " + BMIV + ".";
+            Console.Write("Zadejte svou hmotnost v kg: ");
 
-            Console.WriteLine(InfoJ);
-            Console.WriteLine(BMIJt);
+            string hm = Console.ReadLine();
+
+            int hmo = int.Parse(hm);
+
+            Console.Write("Zadejte svou vysku v cm: ");
+
+            string vy = Console.ReadLine();
+
+            int vys = int.Parse(vy);
+
+            double cm = 0.01;
+
+            double vk = vys * cm;
+
+            double vkk = vk * vk;
+
+            double BMI = hmo / vkk;
+
+
+            Console.WriteLine("Druha osoba");
+
+            Console.Write("Zadejte sve jmeno: ");
+
+            string me2 = Console.ReadLine();
+
+            Console.WriteLine("Zadejte sve prijmeni: ");
+
+            string pr2 = Console.ReadLine();
+
+            Console.Write("Zadejte svuj vek: ");
+
+            string ve2 = Console.ReadLine();
+
+            Console.Write("Zadejte svou hmotnost v kg: ");
+
+            string hm2 = Console.ReadLine();
+
+            int hmo2 = int.Parse(hm);
+
+            Console.Write("Zadejte svou vysku v cm: ");
+
+            string vy2 = Console.ReadLine();
+
+            int vys2 = int.Parse(vy);
+
+            double cm2 = 0.01;
+
+            double vk2 = vys2 * cm2;
+
+            double vkk2 = vk2 * vk2;
+
+            double BMI2 = hmo2 / vkk2;
+
+            Console.WriteLine(me + " " + pr + " je starý(á) " + ve + " let. Váží " + hm + " kilogramů a je " + vy + " centimetrů vysoký/á.");
+            
             Console.WriteLine(" ");
-            Console.WriteLine(InfoV);
-            Console.WriteLine(BMIVt);
+
+            Console.WriteLine(" Vysledni BMI je: " + Math.Round(BMI, 1));
+            
+            Console.WriteLine(" ");
+            
+            Console.WriteLine(me2 + " " + pr2 + " je starý(á) " + ve2 + " let. Váží " + hm2 + " kilogramů a je " + vy2 + " centimetrů vysoký/á.");
+
+            Console.WriteLine(" ");
+
+            Console.WriteLine(" Vysledni BMI je: " + Math.Round(BMI2, 1));
+
+
 
 
 
