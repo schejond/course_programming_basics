@@ -5,12 +5,12 @@
         static void Main(string[] args)
         {
             /*
-Zadání
-Napište program (konzolovou aplikaci), která přečte ze vstupu (od uživatele) jeho
-věk, jméno, příjmení, váhu a výšku. (Poznámka: hodnoty nepište přímo do kódu,
-naprogramujte aplikaci tak, aby je stroj četl. Nechceme žádné údaje uživatelů mít v
-kódu)
-*/
+            Zadání
+            Napište program (konzolovou aplikaci), která přečte ze vstupu (od uživatele) jeho
+            věk, jméno, příjmení, váhu a výšku. (Poznámka: hodnoty nepište přímo do kódu,
+            naprogramujte aplikaci tak, aby je stroj četl. Nechceme žádné údaje uživatelů mít v
+            kódu)
+            */
             Console.Write("Zadej svuj vek a potvrd enterem: ");
             int vekUzivatele2 = int.Parse(Console.ReadLine());
 
