@@ -11,8 +11,8 @@
             for (int t = 1; t <= pocettestovani; t++)
 
             {
-                string name = GetInputAsString("Zadajte svoje meno a priezvisko ");
-                int age = GetInputAsInt("Zadajte svoj vek: ");
+                string name = GetInputAsString("Zadajte svoje meno a priezvisko: ");
+                int age = GetInputAsInt("Zadajte svoj vek ");
                 int height = GetInputAsInt2("Zadajte svoju vysku v cm: ");
                 float weight = GetInputAsFloat("Zadajte svoju hmotnost v kg: ");
 
