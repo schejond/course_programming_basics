@@ -1,4 +1,6 @@
 .vs/
 **/obj/
+**/bin/
 /Homework/bin/Debug/net8.0/Homework.exe
 /Homework/bin/Debug/net8.0
+
