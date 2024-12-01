@@ -57,11 +57,11 @@ namespace Homework
                 }
                 else if (BMI >= 18 && BMI <= 24.9)
                 {
-                    Console.WriteLine("Respondednt spada do kategorie: Mezomorf", ConsoleColor.Blue);
+                    Console.WriteLine("Respondent spada do kategorie: Mezomorf", ConsoleColor.Blue);
                 }
                 else
                 {
-                    Console.WriteLine("Respondednt spada do kategorie: Endormorf", ConsoleColor.Red);
+                    Console.WriteLine("Respondent spada do kategorie: Endormorf", ConsoleColor.Red);
                 }
             }
         }
