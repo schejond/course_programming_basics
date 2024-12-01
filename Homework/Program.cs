@@ -12,7 +12,6 @@ namespace Homework
             int pocettestovani = int.Parse(Console.ReadLine());
 
             for (int t = 1; t <= pocettestovani; t++)
-
             {
                 string name = GetInputAsString("Zadajte svoje meno a priezvisko ");
                 int age = GetInputAsInt("Zadajte svoj vek: ");
