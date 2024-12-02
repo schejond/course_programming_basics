@@ -9,7 +9,6 @@ namespace Homework
             for (int run = 0; run < 2; run++)
             {
 
-
                 Console.WriteLine("Zadej Jméno: ");
                 string firstName = Console.ReadLine();
 
