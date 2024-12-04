@@ -35,10 +35,12 @@ namespace Homework
 
                 //BMI part
 
-                double height_meters = (double)height / 100;
-                double BMI = weight / Math.Pow(height_meters, 2);
+                // double height_meters = (double)height / 100;
+                // double BMI = weight / Math.Pow(height_meters, 2);
+                //
+                // Console.WriteLine("BMI = " + BMI + "\n");
 
-                Console.WriteLine("BMI = " + BMI + "\n");
+                Console.WriteLine("BMI = " + CalculateBMI(height, weight) + "\n");
 
             }
 
@@ -51,6 +53,12 @@ namespace Homework
 
 
             
+        }
+        private static double CalculateBMI(int heightCM, int weight)
+        {
+            double height_meters = (double)heightCM / 100;
+            double BMI = weight / Math.Pow(height_meters, 2);
+            return BMI;
         }
     }
 }
