@@ -16,7 +16,7 @@ namespace Homework
         {
             
 
-            int people = UserInputWMessage_ToInt("Uvedte pocet uzivatelu");
+            int people = UserInputWMessage_ToInt("Uvedte pocet uzivatelu:\n");
             MainCycle(people);
 
 
@@ -55,6 +55,7 @@ namespace Homework
         {
             for (int i = 0; i < number_of_cycles; i++)
             {
+                Console.WriteLine("-------------------------------------------------------------");
                 Console.WriteLine((i + 1) + ". osoba");
 
                 DataCollector();
@@ -92,6 +93,8 @@ namespace Homework
 
             global_BMI = CalculateBMI(global_height, global_weight);
 
+
+
         }
         public static void DataExtractor()
         {
@@ -99,19 +102,40 @@ namespace Homework
 
 
             Console.WriteLine("BMI = " + global_BMI + "\n");
+            Console.WriteLine( "Vaše BMI kategorie je: " + BMICategory(global_BMI) + "\n");
         }
-        //public static int BMICategory()
-        //{
-        //    if (true)
-        //    {
-        //
-        //    }
-        //    else if (true)
-        //    {
-        //
-        //    }
-        //
-        //}
+        public static string BMICategory(float BMI)
+        {
+            if (BMI < 18.5f) //Underweight
+            {
+                return "Podváha";
+            }
+            else if (BMI >= 18.5f && BMI < 25.0f) //Normal weight
+            {
+                return "Normální váha";
+            }
+            else if (BMI >= 25.0f && BMI < 30.0f) //Overweight
+            {
+                return "Nadváha";
+            }
+            else if (BMI >= 30.0f && BMI < 35.0f) // Obesity (Class 1)
+            {
+                return "Obezita (Třída 1)";
+            }
+            else if (BMI >= 35.0f && BMI < 40.0f) // Obesity (Class 2)
+            {
+                return "Obezita (Třída 2)";
+            }
+            else if (BMI >= 40.0f) // Extreme Obesity
+            {
+                return "Extrémní Obezita";
+            }
+            else // IDK error
+            {
+                return "Unknown";
+            }
+        }
+        
     }
 
 }
