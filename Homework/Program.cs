@@ -1,10 +1,9 @@
-
+namespace Homework5 
 {
     internal class Program
     {
         static void Main(string[] args)
-        { 
-           
+        {
             static int GetIntInput(string prompt)
             {
                 Console.WriteLine(prompt);
