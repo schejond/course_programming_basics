@@ -6,14 +6,7 @@ namespace Homework
     {
         static void Main(string[] args)
         {
-
-
-            
             Lesson5.Demo();
-
-
-           
-
         }
     }
 }
