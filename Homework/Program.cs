@@ -1,10 +1,11 @@
-﻿namespace Homework
+namespace Homework5 
 {
-    internal class Program
+    Public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+          Lesson5.Demo();
+        }
         }
     }
 }
