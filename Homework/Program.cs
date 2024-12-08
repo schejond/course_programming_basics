@@ -39,8 +39,6 @@ namespace Homework5
             return "Normální váha";
         else if (bmi >= 25 && bmi < 29.9)
             return "Nadváha";
-        else
-            return "Obezita";
     }
 
     static void Main(string[] args)
