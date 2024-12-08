@@ -30,36 +30,51 @@ namespace Homework5
                 return weight / (height * height);
             }
 
-            
-            static void DisplayPersonInfo(string firstName, string lastName, int age, float weight, float height)
-            {
-                float bmi = CalculateBMI(weight, height);
-                Console.WriteLine($"{firstName} {lastName} je starý(á) {age} let. Váží {weight} kilogramů a je {height * 100} centimetrů vysoký/á.");
-                Console.WriteLine($"BMI této osoby je: {bmi:F2}\n");
-            }
+              // Funkce pro určení kategorie podle BMI
+    public static string KategorizaceBMI(double bmi)
+    {
+        if (bmi < 18.5)
+            return "Podváha";
+        else if (bmi >= 18.5 && bmi < 24.9)
+            return "Normální váha";
+        else if (bmi >= 25 && bmi < 29.9)
+            return "Nadváha";
+        else
+            return "Obezita";
+    }
 
-            static void Main(string[] args)
-            {
-                
-                string firstName1 = GetStringInput("Zadejte jméno první osoby:");
-                string lastName1 = GetStringInput("Zadejte příjmení první osoby:");
-                int age1 = GetIntInput("Zadejte věk první osoby:");
-                float weight1 = GetFloatInput("Zadejte váhu první osoby (v kg):");
-                float height1 = GetFloatInput("Zadejte výšku první osoby (v metrech):");
+    static void Main(string[] args)
+    {
+        // Načítání údajů pro první osobu
+        string jmeno1 = NactiVstupString("Zadejte jméno první osoby:");
+        string prijmeni1 = NactiVstupString("Zadejte příjmení první osoby:");
+        int vek1 = NactiVstupInt("Zadejte věk první osoby:");
+        float vaha1 = NactiVstupFloat("Zadejte váhu první osoby (kg):");
+        float vyska1 = NactiVstupFloat("Zadejte výšku první osoby (cm):") / 100; // převod na metry
 
-                
-                DisplayPersonInfo(firstName1, lastName1, age1, weight1, height1);
+        // Výpočet BMI pro první osobu
+        double bmi1 = VypocetBMI(vaha1, vyska1);
+        string kategorie1 = KategorizaceBMI(bmi1);
 
-                
-                string firstName2 = GetStringInput("Zadejte jméno druhé osoby:");
-                string lastName2 = GetStringInput("Zadejte příjmení druhé osoby:");
-                int age2 = GetIntInput("Zadejte věk druhé osoby:");
-                float weight2 = GetFloatInput("Zadejte váhu druhé osoby (v kg):");
-                float height2 = GetFloatInput("Zadejte výšku druhé osoby (v metrech):");
+        // Zobrazení informací pro první osobu
+        Console.WriteLine($"{jmeno1} {prijmeni1} je starý(á) {vek1} let. Váží {vaha1} kilogramů a je {vyska1 * 100} centimetrů vysoký/á.");
+        Console.WriteLine($"BMI: {bmi1:F1} (Kategorie: {kategorie1})\n");
 
-               
-                DisplayPersonInfo(firstName2, lastName2, age2, weight2, height2);
-            }
+        // Načítání údajů pro druhou osobu
+        string jmeno2 = NactiVstupString("Zadejte jméno druhé osoby:");
+        string prijmeni2 = NactiVstupString("Zadejte příjmení druhé osoby:");
+        int vek2 = NactiVstupInt("Zadejte věk druhé osoby:");
+        float vaha2 = NactiVstupFloat("Zadejte váhu druhé osoby (kg):");
+        float vyska2 = NactiVstupFloat("Zadejte výšku druhé osoby (cm):") / 100; // převod na metry
+
+        // Výpočet BMI pro druhou osobu
+        double bmi2 = VypocetBMI(vaha2, vyska2);
+        string kategorie2 = KategorizaceBMI(bmi2);
+
+        // Zobrazení informací pro druhou osobu
+        Console.WriteLine($"{jmeno2} {prijmeni2} je starý(á) {vek2} let. Váží {vaha2} kilogramů a je {vyska2 * 100} centimetrů vysoký/á.");
+        Console.WriteLine($"BMI: {bmi2:F1} (Kategorie: {kategorie2})");
+        }
         }
     }
 }
