@@ -48,7 +48,7 @@ namespace Homework
                 string surname = GetStringInput($"Zadejte příjmení {label}:");
                 int age = GetIntInput($"Zadejte věk {label}:");
                 float weight = GetFloatInput($"Zadejte váhu {label} (kg):");
-                float height = GetFloatInput($"Zadejte výšku {label} (cm):") / 100; // Convert to meters
+                float height = GetFloatInput($"Zadejte výšku {label} (cm):") / 100; // Převod na metry
 
                 // spočítání bmi a kategorizace
                 double bmi = CalculateBMI(weight, height);
