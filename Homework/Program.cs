@@ -1,42 +1,102 @@
-﻿namespace Homework
 using System;
 
-class Program
+namespace Program.cs
 {
-    static void Main(string[] args)
+    // Třída reprezentující auto
+    public class Car
     {
-        // Pro dvě osoby budeme vykonávat stejný postup
-        for (int i = 1; i <= 2; i++)
+        // Vlastnosti (properties)
+        public string Brand { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public int Mileage { get; set; }
+
+        // Konstruktor, který inicializuje všechny vlastnosti
+        public Car(string brand, string model, int year, int mileage)
         {
-            // Načítání údajů pro osobu
-            Console.WriteLine($"Zadejte údaje pro osobu {i}:");
+            Brand = brand;
+            Model = model;
+            Year = year;
+            Mileage = mileage;
+        }
 
-            // Získání údajů od uživatele
-            Console.Write("Jméno: ");
-            string firstName = Console.ReadLine();
+        // Metoda pro přidání kilometrů
+        public void Drive(int kilometers)
+        {
+            Mileage += kilometers;
+        }
 
-            Console.Write("Příjmení: ");
-            string lastName = Console.ReadLine();
+        // Metoda pro zobrazení informací o autě
+        public void DisplayCarInfo()
+        {
+            Console.WriteLine($"Brand: {Brand}, Model: {Model}, Year: {Year}, Mileage: {Mileage} km");
+        }
+    }
 
-            Console.Write("Věk: ");
-            int age = int.Parse(Console.ReadLine());
+    // Třída reprezentující knihu
+    public class Book
+    {
+        // Vlastnosti (properties)
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public int Pages { get; set; }
+        public int CurrentPage { get; set; }
 
-            Console.Write("Váha (kg): ");
-            double weight = double.Parse(Console.ReadLine());
+        // Konstruktor, který inicializuje všechny vlastnosti
+        public Book(string title, string author, int pages)
+        {
+            Title = title;
+            Author = author;
+            Pages = pages;
+            CurrentPage = 0; // Výchozí hodnota pro aktuální stránku
+        }
 
-            Console.Write("Výška (cm): ");
-            double height = double.Parse(Console.ReadLine());
+        // Metoda pro přidání přečtených stran
+        public void Read(int pages)
+        {
+            CurrentPage += pages;
+            if (CurrentPage > Pages)
+            {
+                CurrentPage = Pages; // Pokud přečteme více než je počet stran, nastavíme na maximum
+            }
+        }
 
-            // Zobrazit uživatelské informace
-            Console.WriteLine($"{firstName} {lastName} je starý(á) {age} let. Váží {weight} kilogramů a je {height} centimetrů vysoký/á.");
+        // Metoda pro zobrazení pokroku v knize
+        public void DisplayProgress()
+        {
+            Console.WriteLine($"Reading '{Title}' by {Author}: {CurrentPage}/{Pages} pages read");
+        }
+    }
 
-            // Výpočet BMI
-            double heightInMeters = height / 100; // Převod výšky na metry
-            double bmi = weight / (heightInMeters * heightInMeters); // Vzorec pro BMI
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Vytvoření objektu třídy Car
+            Car car1 = new Car("Porsche", "GT3-911", 2009, 25340);
+            Car car2 = new Car("Ferrari", "Monza SP1", 2018, 10356);
 
-            // Zobrazení BMI
-            Console.WriteLine($"BMI: {bmi:F2}");
-            Console.WriteLine(); // Prázdný řádek mezi jednotlivými uživatelskými vstupy
+            // Použití metod třídy Car
+            car1.DisplayCarInfo();
+            car2.DisplayCarInfo();
+            car1.Drive(100);
+            car2.Drive(200);
+            car1.DisplayCarInfo();
+            car2.DisplayCarInfo();
+
+            Console.WriteLine();
+
+            // Vytvoření objektu třídy Book
+            Book book1 = new Book("Harry Potter And The Phillosophers Stone", "J.K. Rowling", 320;
+            Book book2 = new Book("1984", "George Orwell", 328);
+
+            // Použití metod třídy Book
+            book1.DisplayProgress();
+            book2.DisplayProgress();
+            book1.Read(50);
+            book2.Read(100);
+            book1.DisplayProgress();
+            book2.DisplayProgress();
         }
     }
 }
