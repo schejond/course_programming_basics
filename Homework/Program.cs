@@ -93,192 +93,191 @@
             vacsieVyslednePole = pridanyDanyElement(pracovnePole, pridajNaElement);
             vypisaniePola(vacsieVyslednePole);
             Console.WriteLine("");
-
-
-            //  FUNKCIE
-
-            // Doplnenie hodnot do pracovneho pola
-            static void doplnenieHodnotDoPracovnehoPola(int[] vstupnePole, int[] pracovnePole)
-            {
-                if (vstupnePole == null)
-                {
-                    pracovnePole = null;
-                }
-                else
-                {
-                    for (int i = 0; i < vstupnePole.Length; i++)
-                    {
-                        pracovnePole[i] = vstupnePole[i];
-                    }
-                }
-            }
-
-            //  Vypisanie pola
-            static void vypisaniePola(int[] vypisanePole)
-            {
-                if (vypisanePole == null)
-                {
-                    Console.Write("null");
-                }
-                else
-                {
-                    foreach (int prvokPola in vypisanePole)
-                    {
-                        Console.Write(prvokPola + " ");
-                    }
-                }
-                Console.WriteLine("");
-            }
-
-            // 1.Zoradenie pola
-            static int[] zoradeniePola(int[] zoradenePole)
-            {
-                if (zoradenePole == null)
-                {
-                    zoradenePole = null;
-                }
-                else
-                {
-                    Array.Sort(zoradenePole);
-                } 
-                return zoradenePole;
-            }
-
-            // 2.Obratenie poradia pola
-            static int[] obratPoradiePola(int[] obratenePole)
-            {
-                if (obratenePole == null)
-                {
-                    obratenePole = null;
-                }
-                else
-                {
-                    Array.Reverse(obratenePole);
-                }
-                return obratenePole;
-            }
-
-            // 3.Odobratie prveho elemntu pola
-            static int[] odobranyPrvyElement(int[] povodnePole)
-            {
-                var upravenePole = new int[4];
-                if (povodnePole == null)
-                {
-                    upravenePole = null;
-                }
-                else
-                {
-                    for (int i = 0; i < povodnePole.Length; i++)
-                    {
-                        if (i != 0) { upravenePole[i - 1] = povodnePole[i]; }
-                    }
-                }
-                return upravenePole;
-            }
-
-            // 4.Odobratie posledneho elemntu pola
-            static int[] odobranyPoslednyElement(int[] povodnePole)
-            {
-                var upravenePole = new int[4];
-                if (povodnePole == null)
-                {
-                    upravenePole = null;
-                }
-                else
-                {
-                    for (int i = 0; i < povodnePole.Length; i++)
-                    {
-                        if (i != povodnePole.Length - 1)
-                        {
-                            upravenePole[i] = povodnePole[i];
-                        }
-                    }
-                }
-                return upravenePole;
-            }
-
-            // 5.Odobratie elemntu z daneho indexu pola
-            static int[] odobranyDanyElement(int[] povodnePole, int odoberElement)
-            {
-                var upravenePole = new int[4];
-                if (povodnePole == null)
-                {
-                    upravenePole = null;
-                }
-                else
-                {
-                    int ii = 0;
-                    for (int i = 0; i < povodnePole.Length; i++)
-                    {
-                        if (i != odoberElement - 1)
-                        {
-                            upravenePole[ii] = povodnePole[i];
-                            ii++;
-                        }
-                    }
-                }
-                return upravenePole;
-            }
-
-            // 6.Vlozenie elemntu na zaciatok pola
-            static int[] pridanyPrvyElement(int[] povodnePole)
-            {
-                var upravenePole = new int[6];
-                if (povodnePole == null)
-                {
-                    upravenePole = null;
-                }
-                else
-                {
-                    for (int i = 0; i <= povodnePole.Length; i++)
-                    {
-                        if (i != 0) { upravenePole[i] = povodnePole[i - 1]; }
-                    }
-                }
-                return upravenePole;
-            }
-
-            // 7.Vlozenie elemntu na koniec pola
-            static int[] pridanyPoslednyElement(int[] povodnePole)
-            {
-                var upravenePole = new int[6];
-                if (povodnePole == null)
-                {
-                    upravenePole = null;
-                }
-                else
-                {
-                    for (int i = 0; i <= povodnePole.Length; i++)
-                    {
-                        if (i != povodnePole.Length)
-                        { upravenePole[i] = povodnePole[i]; }
-                    }
-                }
-                return upravenePole;
-            }
-
-            // 8.Vlozenie elemntu na dany index pola
-            static int[] pridanyDanyElement(int[] povodnePole, int pridajNaElement)
-            {
-                var upravenePole = new int[6];
-                if (povodnePole == null)
-                {
-                    upravenePole = null;
-                }
-                else
-                {
-                    int ii = 0;
-                    for (int i = 0; i <= povodnePole.Length; i++)
-                    {
-                        if (i != pridajNaElement)
-                        {
-                            upravenePole[i] = povodnePole[ii];
-                            ii++;
-                        }
-                    }
-                }
-                return upravenePole;
-            }
         }
+
+         //  FUNKCIE
+
+         // Doplnenie hodnot do pracovneho pola
+         static void doplnenieHodnotDoPracovnehoPola(int[] vstupnePole, int[] pracovnePole)
+         {
+             if (vstupnePole == null)
+             {
+                 pracovnePole = null;
+             }
+             else
+             {
+                 for (int i = 0; i < vstupnePole.Length; i++)
+                 {
+                     pracovnePole[i] = vstupnePole[i];
+                 }
+             }
+         }
+
+                  //  Vypisanie pola
+         static void vypisaniePola(int[] vypisanePole)
+         {
+             if (vypisanePole == null)
+             {
+                 Console.Write("null");
+             }
+             else
+             {
+                 foreach (int prvokPola in vypisanePole)
+                 {
+                     Console.Write(prvokPola + " ");
+                 }
+             }
+             Console.WriteLine("");
+         }
+
+                  // 1.Zoradenie pola
+         static int[] zoradeniePola(int[] zoradenePole)
+         {
+             if (zoradenePole == null)
+             {
+                 zoradenePole = null;
+             }
+             else
+             {
+                 Array.Sort(zoradenePole);
+             } 
+             return zoradenePole;
+         }
+
+                  // 2.Obratenie poradia pola
+         static int[] obratPoradiePola(int[] obratenePole)
+         {
+             if (obratenePole == null)
+             {
+                obratenePole = null;
+             }
+             else
+             {
+                 Array.Reverse(obratenePole);
+             }
+             return obratenePole;
+         }
+
+                  // 3.Odobratie prveho elemntu pola
+         static int[] odobranyPrvyElement(int[] povodnePole)
+         {
+             var upravenePole = new int[povodnePole.Length - 1];
+             if (povodnePole == null)
+             {
+                 upravenePole = null;
+             }
+             else
+             {
+                 for (int i = 0; i < povodnePole.Length; i++)
+                 {
+                     if (i != 0) { upravenePole[i - 1] = povodnePole[i]; }
+                 }
+             }
+             return upravenePole;
+         }
+
+                  // 4.Odobratie posledneho elemntu pola
+         static int[] odobranyPoslednyElement(int[] povodnePole)
+         {
+             var upravenePole = new int[povodnePole.Length - 1];
+             if (povodnePole == null)
+             {
+                 upravenePole = null;
+             }
+             else
+             {
+                 for (int i = 0; i < povodnePole.Length; i++)
+                 {
+                     if (i != povodnePole.Length - 1)
+                     {
+                         upravenePole[i] = povodnePole[i];
+                     }
+                 }
+             }
+             return upravenePole;
+         }
+
+                  // 5.Odobratie elemntu z daneho indexu pola
+         static int[] odobranyDanyElement(int[] povodnePole, int odoberElement)
+         {
+             var upravenePole = new int[povodnePole.Length - 1];
+             if (povodnePole == null)
+             {
+                 upravenePole = null;
+             }
+             else
+             {
+                 int ii = 0;
+                 for (int i = 0; i < povodnePole.Length; i++)
+                 {
+                     if (i != odoberElement - 1)
+                     {
+                         upravenePole[ii] = povodnePole[i];
+                         ii++;
+                     }
+                 }
+             }
+             return upravenePole;
+         }
+
+                  // 6.Vlozenie elemntu na zaciatok pola
+         static int[] pridanyPrvyElement(int[] povodnePole)
+         {
+             var upravenePole = new int[povodnePole.Length + 1];
+             if (povodnePole == null)
+             {
+                 upravenePole = null;
+             }
+             else
+             {
+                 for (int i = 0; i <= povodnePole.Length; i++)
+                 {
+                     if (i != 0) { upravenePole[i] = povodnePole[i - 1]; }
+                 }
+             }
+             return upravenePole;
+         }
+
+                  // 7.Vlozenie elemntu na koniec pola
+         static int[] pridanyPoslednyElement(int[] povodnePole)
+         {
+             var upravenePole = new int[povodnePole.Length + 1];
+             if (povodnePole == null)
+             {
+                 upravenePole = null;
+             }
+             else
+             {
+                 for (int i = 0; i < povodnePole.Length; i++)
+                 {
+                     if (i != povodnePole.Length)
+                     { upravenePole[i] = povodnePole[i]; }
+                 }
+             }
+             return upravenePole;
+         }
+
+                  // 8.Vlozenie elemntu na dany index pola
+         static int[] pridanyDanyElement(int[] povodnePole, int pridajNaElement)
+         {
+             var upravenePole = new int[povodnePole.Length + 1];
+             if (povodnePole == null)
+             {
+                 upravenePole = null;
+             }
+             else
+             {
+                 int ii = 0;
+                 for (int i = 0; i <= povodnePole.Length; i++)
+                 {
+                     if (i != pridajNaElement)
+                     {
+                         upravenePole[i] = povodnePole[ii];
+                         ii++;
+                     }
+                 }
+             }
+             return upravenePole;
+         }
     }
 }
