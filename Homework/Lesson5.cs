@@ -2,7 +2,7 @@
 {
     public class Lesson5
     {
-        static void Main(string[] args)
+        public static void Demo()
         {
             Console.Write("Testovanie bude pre pocet osob: ");
 
@@ -15,30 +15,6 @@
                 int age = GetInputAsInt("Zadajte svoj vek ");
                 int height = GetInputAsInt2("Zadajte svoju vysku v cm: ");
                 float weight = GetInputAsFloat("Zadajte svoju hmotnost v kg: ");
-
-                static string GetInputAsString(string name)
-                {
-                    Console.Write(name);
-                    return Console.ReadLine();
-                }
-
-                static int GetInputAsInt(string age)
-                {
-                    Console.Write(age);
-                    return int.Parse(Console.ReadLine());
-                }
-
-                static int GetInputAsInt2(string height)
-                {
-                    Console.Write(height);
-                    return int.Parse(Console.ReadLine());
-                }
-
-                static float GetInputAsFloat(string weight)
-                {
-                    Console.Write(weight);
-                    return float.Parse(Console.ReadLine());
-                }
 
                 float heightinmetres = height * 0.01f;
 
@@ -64,5 +40,33 @@
             }
         }
 
+        public static string GetInputAsString(string name)
+        {
+            Console.Write(name);
+            return Console.ReadLine();
+        }
+
+        public static int GetInputAsInt(string age)
+        {
+            Console.Write(age);
+            return int.Parse(Console.ReadLine());
+        }
+
+        public static int GetInputAsInt2(string height)
+        {
+            Console.Write(height);
+            return int.Parse(Console.ReadLine());
+        }
+
+        public static float GetInputAsFloat(string weight)
+        {
+            Console.Write(weight);
+            return float.Parse(Console.ReadLine());
+        }
     }
 }
+        
+            
+        
+    
+
