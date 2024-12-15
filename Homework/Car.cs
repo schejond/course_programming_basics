@@ -1,4 +1,4 @@
-namespace ProgramNamespace
+namespace Car.cs
 {
     // Třída reprezentující auto
     public class Car
