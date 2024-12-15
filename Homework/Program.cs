@@ -1,8 +1,8 @@
-using System;
 
-namespace ProgramNamespace
+
+namespace Program.cs
 {
-    class Program.cs
+    class Program
     {
         static void Main(string[] args)
         {
@@ -33,4 +33,4 @@ namespace ProgramNamespace
             book2.DisplayProgress();
         }
     }
-}
+} 
