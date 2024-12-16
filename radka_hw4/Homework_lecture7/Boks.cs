@@ -11,13 +11,13 @@
         public int CurrentPage;
 
 
-        public Book(string Title, string Author, int Pages)
+        public Book(string title, string author, int pages)
         {
-            Title = Title;
+            Title = title;
             
-            Author = Author;
+            Author = author;
             
-            Pages = Pages;
+            Pages = pages;
             
             CurrentPage = 0;
         }
@@ -31,11 +31,10 @@
                 if (CurrentPage > Pages)
                 {
                     CurrentPage = Pages; 
+
                 }
 
-                Console.WriteLine($"You have read {200} pages.");
-
-                Console.WriteLine($"You have read {50} pages.");
+                Console.WriteLine($"You have read {CurrentPage} pages.");
             }
             else
             {
@@ -46,9 +45,7 @@
    
     public void DisplayProgress()
         {
-            Console.WriteLine($"Reading 'Mikeš' by Josef Lada: {335}/{335} pages read");
-
-            Console.WriteLine($"Reading 'Povídání o Pejskovi a Kočičce' by Karel Čapek: {115/115} pages read");
+            Console.WriteLine("Reading " + Title + " by " + Author + " " + CurrentPage + "/" + Pages + " pages read.");
         }
     }
 
