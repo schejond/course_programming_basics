@@ -6,23 +6,47 @@ internal class Program
     static void Main(string[] args)
     {
 
-        Car car = new Car("Skodovka", "Octavia_Combi", 2006, 75000);
+        Car car1 = new Car("Skodovka", "Octavia_Combi", 2006, 75000);
        
-        car.DisplayCarInfo(); 
-       
-        car.Drive(500);
         
-        car.DisplayCarInfo();
+        car1.DisplayCarInfo(); 
+       
+        car1.Drive(500);
+        
+        car1.DisplayCarInfo();
 
 
-        Book book = new Book("Mikeš", "Josef Lada", 335);
+       
+        Car car2 = new Car("Fiat", "Doblo", 2004, 125000);
 
-        book.DisplayProgress();
+        
+        car2.DisplayCarInfo();
 
-        book.Read(200);
+        car2.Drive(300);
 
-        book.DisplayProgress();
+        car2.DisplayCarInfo();
 
+
+
+        Book book1 = new Book("Mikeš", "Josef Lada", 335);
+
+       
+        book1.DisplayProgress();
+
+        book1.Read(200);
+
+        book1.DisplayProgress();
+
+        
+        
+        Book book2 = new Book("Povídání o Pejskovi a Kočičce", "Karel Čapek", 115);
+
+        
+        book2.DisplayProgress();
+
+        book2.Read(50);
+
+        book2.DisplayProgress();
 
 
 

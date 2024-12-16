@@ -13,15 +13,15 @@ namespace Homework_lecture7
         public int Mileage;
 
 
-        public Car(string Brand, string Model, int Year, int Mileage = 0)
+        public Car(string brand, string model, int year, int mileage = 0)
         {
-            Brand = Brand;
+            Brand = brand;
 
-            Model = Model;
+            Model = model;
 
-            Year = Year;
+            Year = year;
 
-            Mileage = Mileage;
+            Mileage = mileage;
         }
         public void Drive(int kilometers)
         {
@@ -29,13 +29,13 @@ namespace Homework_lecture7
             {
                 Mileage += kilometers; 
 
-                Console.WriteLine($"The car has been driven {500} kilometers.");
-
-                Console.WriteLine($"The car has been driven {300} kilometers.");
+                Console.WriteLine($"The car has been driven {Mileage} kilometers.");
             }
+
             else
             {
                 Console.WriteLine("The number of kilometers must be positive.");
+                
             }
         }
 
@@ -43,11 +43,11 @@ namespace Homework_lecture7
              public void DisplayCarInfo()
              {
 
-                 Console.WriteLine($"Brand: Škodovka, Model: Octavia_Combi, Year: 2006, Mileage: {75000} km");
+                 Console.WriteLine("Reading" + Brand + ",  " + Model + ", " + Year + ", " + Mileage + " km ");
 
-                 Console.WriteLine($"Brand: Fiat, Model: Doblo, Year: 2004, Mileage: {125000} km");
+                
 
-        }
+             }
 
     }
 }
